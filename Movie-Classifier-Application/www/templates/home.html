@@ -22,7 +22,8 @@
               <a class="item" href="#" ng-repeat="r in Result">
                 <div class="row">
                 <div class="col col-33">
-                <img src="{{r.Poster}}" class="poster-search">
+                <img ng-if="r.Poster != 'N/A' " src="{{r.Poster}}" class="poster-search">
+                <img ng-if="r.Poster == 'N/A' " src="img/no-image-icon-23500.jpg" class="poster-search">
                 </div>
                 <div class="col col-66">
                 <h2>{{r.Title}}</h2>
