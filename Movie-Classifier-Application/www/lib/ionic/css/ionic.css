@@ -4432,6 +4432,7 @@ a.subdued {
     background-color: #fff;
     color: #33cd5f; }
 
+
 .tabs-energized > .tabs,
 .tabs.tabs-energized {
   border-color: #e6b500;
@@ -4445,14 +4446,14 @@ a.subdued {
 
 .tabs-royal > .tabs,
 .tabs.tabs-royal {
-  border-color: #6b46e5;
-  background-color: #886aea;
-  background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);
+  border-color: #f18227;
+  background-color: #fc912e;
+  background-image: linear-gradient(0deg, #fc912e, #fc912e 50%, transparent 50%);
   color: #fff; }
   .tabs-royal > .tabs .tab-item .badge,
   .tabs.tabs-royal .tab-item .badge {
     background-color: #fff;
-    color: #886aea; }
+    color: #fd8d42; }
 
 .tabs-dark > .tabs,
 .tabs.tabs-dark {
@@ -4498,6 +4499,7 @@ a.subdued {
 
 .tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.activated .badge {
   top: 4%; }
+  
 
 .tabs-striped.tabs-stable .tabs {
   background-color: #f8f8f8; }
@@ -4608,7 +4610,7 @@ a.subdued {
   top: 4%; }
 
 .tabs-striped.tabs-royal .tabs {
-  background-color: #886aea; }
+  background-color: #f7824c; }
 
 .tabs-striped.tabs-royal .tab-item {
   color: rgba(255, 255, 255, 0.4);
@@ -4672,7 +4674,7 @@ a.subdued {
   background-image: none; }
 
 .tabs-striped.tabs-background-royal .tabs {
-  background-color: #886aea;
+  background-color: #ff8a1c;
   background-image: none; }
 
 .tabs-striped.tabs-background-dark .tabs {
@@ -4849,9 +4851,9 @@ a.subdued {
 
 .tabs-background-royal .tabs,
 .tabs-background-royal > .tabs {
-  background-color: #886aea;
+  background-color: #ff954e;
   background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);
-  border-color: #6b46e5; }
+  border-color: #fd7231; }
 
 .tabs-background-dark .tabs,
 .tabs-background-dark > .tabs {
