@@ -5,7 +5,7 @@
 
             <div class="item item-input-inset">
               <label class="item item-input col col-80">
-                <input type="text" placeholder="Movie Name" ng-model="searchtext">
+                <input type="text" placeholder="Movie Name" ng-model="searchtext" ng-change="isEmpx()">
               </label>&nbsp;
               <button class="button button-balanced" ng-click="searchMovie()">
                 Search
@@ -19,7 +19,7 @@
           
           <div class="list">
 
-              <a class="item" href="#" ng-repeat="r in Result">
+              <a class="item" ng-repeat="r in Result" href="#/app/showmovie/{{r.imdbID}}">
                 <div class="row">
                 <div class="col col-33">
                 <img src="{{r.Poster}}" class="poster-search">
