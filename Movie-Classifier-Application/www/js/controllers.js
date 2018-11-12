@@ -100,7 +100,10 @@ angular.module('starter.controllers', [])
         }
       ]
     }
-    $scope.favlist = fav["Search"];
+    $scope.favlist=fav["Search"];
+    $scope.delfav=function(item){
+  $scope.favlist.splice(item, 1);
+    }
   })
 
   .controller('ProfileCtrl', function ($scope, $ionicModal) {
