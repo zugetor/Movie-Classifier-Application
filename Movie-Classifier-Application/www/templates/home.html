@@ -1,26 +1,62 @@
 <ion-view view-title="HOME">
+  
     <ion-content>
-		
+       
+
+            <div class="item item-input-inset">
+              <label class="item item-input col col-80">
+                <input type="text" placeholder="Movie Name" ng-model="searchtext" ng-change="isEmpx()">
+              </label>&nbsp;
+              <button class="button button-balanced" ng-click="searchMovie()">
+                Search
+              </button>
+            </div>
+          
+          
+      <div class="text-center {{hideorshow}}">
+          <img class="img-search-home" src="img/banana.png">
+          <h1><i class="icon ion-arrow-up-a"></i></h1>
+          <h1>Warp Here</h1>
+          </div>
+          <div class="text-center error-center"><h1>{{errorResult}}</h1></div>
+          <div class="list">
+
+              <a class="item" ng-repeat="r in Result" href="#/app/showmovie/{{r.imdbID}}">
+                <div class="row">
+                <div class="col col-33">
+                <img ng-if="r.Poster != 'N/A' " src="{{r.Poster}}" class="poster-search">
+                <img ng-if="r.Poster == 'N/A' " src="img/no-image-icon-23500.jpg" class="poster-search">
+                </div>
+                <div class="col col-66">
+                <h2>{{r.Title}}</h2>
+                <p>({{r.Year}})</p>
+                </div>
+              </div>
+              </a>
+          
+          </div>
+
   </ion-content>
-  <div class="tabs-striped tabs-color-light tabs-background-royal tabs-icon-top" >
-    <div class="tabs">
-      <a class="tab-item active" href="#">
-        <i class="icon ion-home"></i>
-        HOME
-      </a>
-      <a class="tab-item" href="#/app/profile">
-        <i class="icon ion-person"></i>
-        Profile
-      </a>
-      <a class="tab-item" href="#/app/favorite">
-        <i class="icon ion-star"></i>
-        Favorite
-      </a>
-      <a class="tab-item" href="#/app/boxoffice">
-        <i class="icon ion-arrow-graph-up-right"></i>
-        Box Office
-      </a>
+  
+  <div class="tabs-striped tabs-color-light tabs-background-royal tabs-icon-top">
+      <div class="tabs">
+        <a class="tab-item active" href="#" nav-transition="none">
+          <i class="icon ion-home"></i>
+          HOME
+        </a>
+        <a class="tab-item" href="#/app/profile" nav-transition="none">
+          <i class="icon ion-person"></i>
+          Profile
+        </a>
+        <a class="tab-item" href="#/app/favorite" nav-transition="none">
+          <i class="icon ion-star"></i>
+          Favorite
+        </a>
+        <a class="tab-item" href="#/app/boxoffice" nav-transition="none">
+          <i class="icon ion-arrow-graph-up-right"></i>
+          Box Office
+        </a>
+      </div>
     </div>
-  </div>
   </ion-view>
   
