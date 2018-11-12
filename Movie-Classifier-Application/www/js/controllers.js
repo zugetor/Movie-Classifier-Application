@@ -3,6 +3,7 @@ angular.module('starter.controllers', [])
   .controller('AppCtrl', function ($scope, $ionicModal) {})
 
   .controller('HomeCtrl', function ($scope, $ionicModal, $http,$state, $stateParams) {
+    $scope.errorResult="";
     $scope.searchtext = "";
     $scope.searchlist="";
     $scope.hideorshow="ng-show";
@@ -15,6 +16,9 @@ angular.module('starter.controllers', [])
           console.log($scope.searchlist);
           $scope.Result=$scope.searchlist["Search"];
           $scope.hideorshow="ng-hide";
+          if($scope.searchlist["Response"]=="False"){
+            $scope.errorResult=$scope.searchlist["Error"];
+          }
         });
     }
     else{
@@ -26,6 +30,7 @@ angular.module('starter.controllers', [])
       if(this.searchtext==""){
         $scope.Result="";
         $scope.hideorshow="ng-show";
+        $scope.errorResult="";
     }
     }
 
@@ -47,11 +52,21 @@ angular.module('starter.controllers', [])
           if($scope.minplot.length>100){
             $scope.minplot=$scope.minplot.substr(0,200);
           }
+          else{
+            $scope.seeText="";
+            $scope.minplot="No plot"
+          }
           
         });
     $scope.seemore=function(){
+      if($scope.seeText=="see more"){
       $scope.minplot=$scope.moviedetail["Plot"];
-      $scope.seeText="";
+      $scope.seeText="see less";
+      }
+      else if($scope.seeText=="see less"){
+        $scope.minplot=$scope.minplot.substr(0,200);
+        $scope.seeText="see more";
+      }
     }
   })
 

@@ -1,5 +1,5 @@
 .img-search-home{
-    padding-top:50px;
+    padding-top:8.5em;
     width:50%;
     height: auto; 
 }
@@ -25,4 +25,11 @@
     padding-top:0px;
     padding-bottom:0px;
     padding-left:0px;
+}
+.error-center{
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
