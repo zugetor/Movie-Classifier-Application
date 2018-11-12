@@ -1,20 +1,23 @@
 <ion-view view-title="Favorite">
     <ion-content>
 		
-		<label class="item item-input">
-          <i class="icon ion-search placeholder-icon"></i>
-          <input type="search" placeholder="Search">
-        </label>
-		<ion-list>
-          <ion-list can-swipe="true">
-          	<ion-item  item-width="'100%'" item-height="100%" href="#" class="item-thumbnail-left" hold-list>
-          		<img src="https://m.media-amazon.com/images/M/MV5BNjk1Njk3YjctMmMyYS00Y2I4LThhMzktN2U0MTMyZTFlYWQ5XkEyXkFqcGdeQXVyODM2ODEzMDA@._V1_.jpg" >
-          		<h2>Dead Pool2</h2>
-          		<h4>18 May 2018 (USA) </h4>
-          		<ion-option-button class="button-assertive icon ion-trash-a">Delete</ion-option-button>
-          	</ion-item>
-          </ion-list>
-        </ion-list>
+		<div class="text-center"><h1>MY FAVORITE MOVIE</h1></div>
+		<a class="item" ng-repeat="r in favlist" href="#/app/showmovie/{{r.imdbID}}">
+      <div class="row">
+      <div class="col col-33">
+      <img ng-if="r.Poster != 'N/A' " src="{{r.Poster}}" class="poster-search">
+      <img ng-if="r.Poster == 'N/A' " src="img/no-image-icon-23500.jpg" class="poster-search">
+      </div>
+      <div class="col col-50">
+      <h2>{{r.Title}}</h2>
+      <p>({{r.Year}})</p>
+      </div>
+      <div class="col col-10 text-right">
+          <h1><i class="icon ion-trash-a"></i></h1>
+          </div>
+    </div>
+    </a>
+
 		
     </ion-content>
     <ion-footer-bar class="tabs-striped tabs-color-light tabs-background-royal tabs-icon-top" >
