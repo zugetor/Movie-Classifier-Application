@@ -2,7 +2,8 @@
     <ion-content>
 		<div class="list card">
             <div class="item item-body">
-              <img class="full-image" src="{{moviedetail.Poster}}">
+              <img ng-if="moviedetail.Poster != 'N/A'" class="full-image" src="{{moviedetail.Poster}}">
+              <img ng-if="moviedetail.Poster == 'N/A'" class="full-image" src="img/no-image-icon-23500.jpg">
               <div class="item">
                     <div class="row">
                   <div class="col">
