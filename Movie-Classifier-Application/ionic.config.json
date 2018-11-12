@@ -1,6 +1,8 @@
 {
   "name": "Movie-Classifier-Application",
-  "integrations": {},
+  "integrations": {
+    "gulp": {}
+  },
   "type": "ionic1",
   "watchPatterns": [
     "scss/**/*",

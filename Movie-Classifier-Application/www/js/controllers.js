@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
     $scope.hideorshow="ng-show";
     $scope.searchMovie = function () {
         if(this.searchtext!=""){
-        var SearchUrl="http://www.omdbapi.com/?Type=Movie&page=1&apikey=BanMePlz&s="+this.searchtext;
+        var SearchUrl="https://www.omdbapi.com/?Type=Movie&page=1&apikey=BanMePlz&s="+this.searchtext;
         $http.get(SearchUrl)
         .then(function (response) {
           $scope.searchlist = response.data;
