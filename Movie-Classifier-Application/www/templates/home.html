@@ -15,8 +15,10 @@
           
       <div class="text-center {{hideorshow}}">
           <img class="img-search-home" src="img/banana.png">
+          <h1><i class="icon ion-arrow-up-a"></i></h1>
+          <h1>Warp Here</h1>
           </div>
-          
+          <div class="text-center error-center"><h1>{{errorResult}}</h1></div>
           <div class="list">
 
               <a class="item" ng-repeat="r in Result" href="#/app/showmovie/{{r.imdbID}}">

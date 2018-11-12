@@ -1,15 +1,16 @@
 <ion-view view-title="ViewMovie">
     <ion-content>
 		<div class="list card">
-
-            <div class="item text-center">
-              
-              <h2>{{moviedetail.Title}}</h2>
-              
-            </div>
-          
             <div class="item item-body">
               <img class="full-image" src="{{moviedetail.Poster}}">
+              <div class="item">
+                    <div class="row">
+                  <div class="col">
+                  <h2 style="font-size: 25px; font-weight: bolder">{{moviedetail.Title}}</h2>
+                  </div>
+                  
+                    </div>
+                </div>
               <h2>Plot</h2>
               <p>
                     {{minplot}}
