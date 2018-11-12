@@ -14,11 +14,16 @@
           
           
       <div class="text-center {{hideorshow}}">
+        <input type="file" id="warp" ng-hide="true">
+        <a ng-click="insertPic()">
           <img class="img-search-home" src="img/banana.png">
           <h1><i class="icon ion-arrow-up-a"></i></h1>
           <h1>Warp Here</h1>
+          <a ng-click="findWarp()">submit</a>
+          </a>
           </div>
           <div class="text-center error-center"><h1>{{errorResult}}</h1></div>
+          
           <div class="list">
 
               <a class="item" ng-repeat="r in Result" href="#/app/showmovie/{{r.imdbID}}">
