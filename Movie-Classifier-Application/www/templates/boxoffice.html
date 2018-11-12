@@ -5,135 +5,270 @@
 
       <ion-item class="item item-button-right">
         <h2>Daily Chart</h2>
-        <button class="button button-clear button-dark">
-          <h2>SEE ALL</h2>
+        <button class="button button-clear button-dark" ng-click="DD()">
+          <h2>{{Day}}</h2>
         </button>
       </ion-item>
+      <div class="{{hideD}}">
+        <ion-scroll direction="x" class="wide-as-needed">
 
-      <ion-scroll direction="x" class="wide-as-needed">
+          <div class="row">
 
-        <div class="row">
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
 
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
           </div>
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
-          </div>
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
-          </div>
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
+
+        </ion-scroll>
+      </div>
+
+      <div class="{{showD}}">
+        <ion-scroll direction="y" class="wide-as-needed">
+
+          <div class="row">
+
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+
           </div>
 
-        </div>
+          <div class="row">
 
-      </ion-scroll>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+
+          </div>
+
+        </ion-scroll>
+      </div>
 
       <ion-item class="item item-button-right">
         <h2>Weekly Chart</h2>
-        <button class="button button-clear button-dark">
-          <h2>SEE ALL</h2>
+        <button class="button button-clear button-dark" ng-click="WW()">
+          <h2>{{Week}}</h2>
         </button>
       </ion-item>
+      <div class="{{hideW}}">
+        <ion-scroll direction="x" class="wide-as-needed">
 
-      <ion-scroll direction="x" class="wide-as-needed" scrollbar="false">
+          <div class="row">
 
-        <div class="row">
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
 
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
           </div>
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
-          </div>
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
-          </div>
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
+
+        </ion-scroll>
+      </div>
+
+      <div class="{{showW}}">
+        <ion-scroll direction="y" class="wide-as-needed">
+
+          <div class="row">
+
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+
           </div>
 
-        </div>
+          <div class="row">
 
-      </ion-scroll>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+
+          </div>
+
+        </ion-scroll>
+      </div>
 
       <ion-item class="item item-button-right">
         <h2>Monthly Chart</h2>
-        <button class="button button-clear button-dark">
-          <h2>SEE ALL</h2>
+        <button class="button button-clear button-dark" ng-click="MM()">
+          <h2>{{Month}}</h2>
         </button>
       </ion-item>
+      <div class="{{hideM}}">
+        <ion-scroll direction="x" class="wide-as-needed">
 
-      <ion-scroll direction="x" class="wide-as-needed">
+          <div class="row">
 
-        <div class="row">
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
 
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
           </div>
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
-          </div>
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
-          </div>
-          <div class="col">
-            <a class="item item-thumbnail-top test-center" href="#">
-              <img src="img/cover.jpg" height=100% width=100%>
-              <h2>Pretty Hate Machine</h2>
-              <h4>Nine Inch Nails</h4>
-            </a>
+
+        </ion-scroll>
+      </div>
+
+      <div class="{{showM}}">
+        <ion-scroll direction="y" class="wide-as-needed">
+
+          <div class="row">
+
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+
           </div>
 
-        </div>
+          <div class="row">
 
-      </ion-scroll>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+            <div class="col">
+              <a class="item item-thumbnail-top test-center" href="#">
+                <img src="img/cover.jpg" height=100% width=100%>
+                <h2>Pretty Hate Machine</h2>
+                <h4>Nine Inch Nails</h4>
+              </a>
+            </div>
+
+          </div>
+
+        </ion-scroll>
+      </div>
 
     </ion-list>
 

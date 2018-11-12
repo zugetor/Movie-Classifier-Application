@@ -1,6 +1,7 @@
 angular.module('starter.controllers', [])
 
-  .controller('AppCtrl', function ($scope, $ionicModal) {})
+  .controller('AppCtrl', function ($scope, $ionicModal) {
+  })
 
   .controller('HomeCtrl', function ($scope, $http) {
     $scope.errorResult = "";
@@ -9,7 +10,7 @@ angular.module('starter.controllers', [])
     $scope.hideorshow = "ng-show";
     $scope.searchMovie = function () {
       if (this.searchtext != "") {
-        var SearchUrl = "https://www.omdbapi.com/?Type=Movie&page=1&apikey=BanMePlz&s="+this.searchtext;
+        var SearchUrl = "https://www.omdbapi.com/?Type=Movie&page=1&apikey=BanMePlz&s=" + this.searchtext;
         $http.get(SearchUrl)
           .then(function (response) {
             $scope.searchlist = response.data;
@@ -20,7 +21,7 @@ angular.module('starter.controllers', [])
               $scope.errorResult = $scope.searchlist["Error"];
             }
           });
-      } 
+      }
       else {
         $scope.Result = "";
         $scope.hideorshow = "ng-show";
@@ -70,12 +71,12 @@ angular.module('starter.controllers', [])
   .controller('FavoriteCtrl', function ($scope, $ionicModal) {
     var fav = {
       "Search": [{
-          "Title": "Star Wars: The Last Jedi",
-          "Year": "2017",
-          "imdbID": "tt2527336",
-          "Type": "movie",
-          "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_SX300.jpg"
-        },
+        "Title": "Star Wars: The Last Jedi",
+        "Year": "2017",
+        "imdbID": "tt2527336",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_SX300.jpg"
+      },
         {
           "Title": "Star Trek: Beyond",
           "Year": "2016",
@@ -99,10 +100,11 @@ angular.module('starter.controllers', [])
         }
       ]
     }
-    $scope.favlist=fav["Search"];
+    $scope.favlist = fav["Search"];
   })
 
-  .controller('ProfileCtrl', function ($scope, $ionicModal) {})
+  .controller('ProfileCtrl', function ($scope, $ionicModal) {
+  })
 
   .controller('ShowmovieCtrl', function ($scope, $ionicModal, $state, $stateParams, $http) {
     $scope.seeText = "see more";
@@ -132,4 +134,56 @@ angular.module('starter.controllers', [])
     }
   })
 
-  .controller('BoxofficeCtrl', function ($scope, $ionicModal) {})
+  .controller('BoxofficeCtrl', function ($scope, $ionicModal) {
+    $scope.Day = "SEE ALL"
+    $scope.cD = 0;
+    $scope.hideD = "";
+    $scope.showD = "ng-hide";
+    $scope.DD = function () {
+      if (this.cD == 0) {
+        $scope.cD = 1;
+        $scope.Day = "HIDE"
+        $scope.hideD = "ng-hide";
+        $scope.showD = "";
+      } else {
+        $scope.cD = 0;
+        $scope.Day = "SEE ALL"
+        $scope.hideD = "";
+        $scope.showD = "ng-hide";
+      }
+    }
+    $scope.Week = "SEE ALL"
+    $scope.cW = 0;
+    $scope.hideW = "";
+    $scope.showW = "ng-hide";
+    $scope.WW = function () {
+      if (this.cW == 0) {
+        $scope.cW = 1;
+        $scope.Week = "HIDE"
+        $scope.hideW = "ng-hide";
+        $scope.showW = "";
+      } else {
+        $scope.cW = 0;
+        $scope.Week = "SEE ALL"
+        $scope.hideW = "";
+        $scope.showW = "ng-hide";
+      }
+    }
+    $scope.Month = "SEE ALL"
+    $scope.cM = 0;
+    $scope.hideM = "";
+    $scope.showM = "ng-hide";
+    $scope.MM = function () {
+      if (this.cM == 0) {
+        $scope.cM = 1;
+        $scope.Month = "HIDE"
+        $scope.hideM = "ng-hide";
+        $scope.showM = "";
+      } else {
+        $scope.cD = 0;
+        $scope.Month = "SEE ALL"
+        $scope.hideM = "";
+        $scope.showM = "ng-hide";
+      }
+    }
+  })
