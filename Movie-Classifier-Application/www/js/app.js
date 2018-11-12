@@ -77,7 +77,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   })
 
   .state('app.showmovie', {
-    url: '/showmovie',
+    url: '/showmovie/:Id',
     views: {
       'menuContent': {
         templateUrl: 'templates/showmovie.html',
