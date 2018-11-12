@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
     $scope.hideorshow="ng-show";
     $scope.searchMovie = function () {
         if(this.searchtext!=""){
-        var SearchUrl="http://www.omdbapi.com/?Type=Movie&page=1&apikey=BanMePlz&fbclid=IwAR0ZlSWZY-JRTZ-cc6JqlwOLKr6XuRzUAf5oNhi6_M_Rrd1eUZ8LhJ_2q34&s="+this.searchtext;
+        var SearchUrl="http://www.omdbapi.com/?Type=Movie&page=1&apikey=BanMePlz&s="+this.searchtext;
         $http.get(SearchUrl)
         .then(function (response) {
           $scope.searchlist = response.data;
@@ -22,6 +22,12 @@ angular.module('starter.controllers', [])
         $scope.hideorshow="ng-show";
     }
     }
+    $scope.isEmpx=function(){
+      if(this.searchtext==""){
+        $scope.Result="";
+        $scope.hideorshow="ng-show";
+    }
+    }
 
   })
 
@@ -29,6 +35,6 @@ angular.module('starter.controllers', [])
 
   .controller('ProfileCtrl', function ($scope, $ionicModal) {})
 
-  .controller('ShowmivieCtrl', function ($scope, $ionicModal) {})
+  .controller('ShowmovieCtrl', function ($scope, $ionicModal) {})
 
   .controller('BoxofficeCtrl', function ($scope, $ionicModal) {})
