@@ -2,14 +2,14 @@ angular.module('starter.controllers', [])
 
   .controller('AppCtrl', function ($scope, $ionicModal) {})
 
-  .controller('HomeCtrl', function ($scope, $ionicModal, $http, $interval) {
+  .controller('HomeCtrl', function ($scope, $http) {
     $scope.errorResult = "";
     $scope.searchtext = "";
     $scope.searchlist = "";
     $scope.hideorshow = "ng-show";
     $scope.searchMovie = function () {
       if (this.searchtext != "") {
-        var SearchUrl = "https://www.omdbapi.com/?Type=Movie&page=1&apikey=BanMePlz&s=" + this.searchtext;
+        var SearchUrl = "https://www.omdbapi.com/?Type=Movie&page=1&apikey=BanMePlz&s="+this.searchtext;
         $http.get(SearchUrl)
           .then(function (response) {
             $scope.searchlist = response.data;
@@ -20,7 +20,8 @@ angular.module('starter.controllers', [])
               $scope.errorResult = $scope.searchlist["Error"];
             }
           });
-      } else {
+      } 
+      else {
         $scope.Result = "";
         $scope.hideorshow = "ng-show";
       }
