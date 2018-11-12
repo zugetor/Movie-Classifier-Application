@@ -1,6 +1,29 @@
 <ion-view view-title="ViewMovie">
     <ion-content>
-		
+		<div class="list card">
+            <div class="item item-body">
+              <img ng-if="moviedetail.Poster != 'N/A'" class="full-image" src="{{moviedetail.Poster}}">
+              <img ng-if="moviedetail.Poster == 'N/A'" class="full-image" src="img/no-image-icon-23500.jpg">
+              <div class="item">
+                    <div class="row">
+                  <div class="col">
+                  <h2 style="font-size: 25px; font-weight: bolder">{{moviedetail.Title}}</h2>
+                  </div>
+                  
+                    </div>
+                </div>
+              <h2>Plot</h2>
+              <p>
+                    {{minplot}}
+                    
+              </p>
+              <a ng-click="seemore()">{{seeText}}</a>
+              <p>
+                
+              </p>
+            </div>
+          
+          </div>
 	</ion-content>
   </ion-view>
   
