@@ -2,7 +2,6 @@
   
     <ion-content>
        
-
             <div class="item item-input-inset">
               <label class="item item-input col col-80">
                 <input type="text" placeholder="Movie Name" ng-model="searchtext" ng-change="isEmpx()">
@@ -11,10 +10,9 @@
                 Search
               </button>
             </div>
-          
-          
+                    
             <div class="text-center {{hideorshow}}">
-              <input type="file" id="warp" ng-hide="true">
+              <input type="file" id="warp" ng-hide="true" onchange="angular.element(this).scope().findWarp(this)">
               <a ng-click="insertPic()">
                 <img class="img-search-home" src="img/banana.png">
               </a>
@@ -29,9 +27,7 @@
                   <img class="img-result" src="{{resultMovie}}"><br>
                   <button ng-click="closeresult()" class="button button-royal">close</button>
                 </div>
-
           <div class="list">
-
               <a class="item" ng-repeat="r in Result" href="#/app/showmovie/{{r.imdbID}}">
                 <div class="row">
                 <div class="col col-33">
@@ -43,8 +39,7 @@
                 <p>({{r.Year}})</p>
                 </div>
               </div>
-              </a>
-          
+              </a>          
           </div>
 
   </ion-content>
@@ -66,4 +61,3 @@
       </div>
     </ion-footer-bar>
   </ion-view>
-  
