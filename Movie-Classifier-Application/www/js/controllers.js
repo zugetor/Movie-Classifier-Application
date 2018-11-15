@@ -11,7 +11,7 @@ angular.module('starter.controllers', [])
     $scope.hideorshow = "ng-show";
     $scope.searchMovie = function () {
       if (this.searchtext != "") {
-        var SearchUrl = "https://www.omdbapi.com/?Type=Movie&page=1&apikey=BanMePlz&s=" + this.searchtext;
+        var SearchUrl = "https://www.omdbapi.com/?Type=Movie&page=1&apikey=32b0c1e3&s=" + this.searchtext;
         $http.get(SearchUrl)
           .then(function (response) {
             $scope.searchlist = response.data;
@@ -129,7 +129,7 @@ angular.module('starter.controllers', [])
   .controller('ShowmovieCtrl', function ($scope, $ionicModal, $state, $stateParams, $http) {
     $scope.seeText = "see more";
     var idmovie = $stateParams.Id;
-    var SearchUrl = "https://www.omdbapi.com/?Type=Movie&page=1&apikey=BanMePlz&plot=full&i=" + idmovie;
+    var SearchUrl = "https://www.omdbapi.com/?Type=Movie&page=1&apikey=32b0c1e3&plot=full&i=" + idmovie;
     $http.get(SearchUrl)
       .then(function (response) {
         $scope.moviedetail = response.data;
