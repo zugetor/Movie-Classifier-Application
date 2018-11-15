@@ -1,7 +1,6 @@
 <ion-view view-title="Favorite">
     <ion-content>
 		
-		<div class="text-center"><h1>MY FAVORITE MOVIE</h1></div>
 		<div class="item" ng-repeat="r in favlist" href="#/app/showmovie/{{r.imdbID}}">
       
       <div class="row">
@@ -31,10 +30,7 @@
                 <i class="icon ion-home"></i>
                 HOME
               </a>
-              <a class="tab-item" href="#/app/profile" nav-transition="none">
-                <i class="icon ion-person"></i>
-                Profile
-              </a>
+             
               <a class="tab-item active" href="#/app/favorite" nav-transition="none">
                 <i class="icon ion-star"></i>
                 Favorite

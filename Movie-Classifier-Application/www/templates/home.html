@@ -17,13 +17,19 @@
               <input type="file" id="warp" ng-hide="true">
               <a ng-click="insertPic()">
                 <img class="img-search-home" src="img/banana.png">
+              </a>
                 <h1><i class="icon ion-arrow-up-a"></i></h1>
-                <h1>Warp Here</h1>
-                <a ng-click="findWarp()">submit</a>
-                </a>
+                <a ng-click="findWarp()"><h1>Warp Here</h1></a>
                 </div>
           <div class="text-center error-center"><h1>{{errorResult}}</h1></div>
           
+                <div class="text-center {{hideorshow2}}" style="padding-top:50px">
+                  <h2>Result</h2>
+                  <h1>{{picresult}}</h1>
+                  <img class="img-result" src="{{resultMovie}}"><br>
+                  <button ng-click="closeresult()" class="button button-royal">close</button>
+                </div>
+
           <div class="list">
 
               <a class="item" ng-repeat="r in Result" href="#/app/showmovie/{{r.imdbID}}">
@@ -48,10 +54,6 @@
         <a class="tab-item active" href="#" nav-transition="none">
           <i class="icon ion-home"></i>
           HOME
-        </a>
-        <a class="tab-item" href="#/app/profile" nav-transition="none">
-          <i class="icon ion-person"></i>
-          Profile
         </a>
         <a class="tab-item" href="#/app/favorite" nav-transition="none">
           <i class="icon ion-star"></i>

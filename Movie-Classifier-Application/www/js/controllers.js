@@ -5,6 +5,7 @@ angular.module('starter.controllers', [])
 
   .controller('HomeCtrl', function ($scope, $http) {
     $scope.errorResult = "";
+    $scope.hideorshow2 = "ng-hide";
     $scope.searchtext = "";
     $scope.searchlist = "";
     $scope.hideorshow = "ng-show";
@@ -37,6 +38,7 @@ angular.module('starter.controllers', [])
     var uploadForm = document.getElementById("Warp");
     $scope.insertPic = function () {
       document.getElementById("warp").click();
+
     }
 
     $scope.findWarp = function () {
@@ -61,11 +63,28 @@ angular.module('starter.controllers', [])
           xhrObj.setRequestHeader("Prediction-Key", "a34fc7be84d24fbab8c63ef773b3534f");
         },
         success: function (data) {
-          alert(data["predictions"][0]["tagName"]);
+          $scope.hideorshow = "ng-hide";
+          $scope.hideorshow2 = "ng-show";
+          $scope.picresult=data["predictions"][0]["tagName"];
+          if($scope.picresult=="Terminator"){
+            $scope.resultMovie="img/termi.jpg";
+          }
+          else if($scope.picresult=="Back2TheFuture"){
+            $scope.resultMovie="img/back2.jpg";
+          }
+          else if($scope.picresult=="JurassicPark"){
+            $scope.resultMovie="img/juras.jpg";
+          }
         }
       });
     }
 
+    $scope.closeresult=function(){
+      $scope.hideorshow2 = "ng-hide";
+      $scope.Result = "";
+        $scope.hideorshow = "ng-show";
+        $scope.errorResult = "";
+    }
   })
 
   .controller('FavoriteCtrl', function ($scope, $ionicModal) {
@@ -106,8 +125,6 @@ angular.module('starter.controllers', [])
     }
   })
 
-  .controller('ProfileCtrl', function ($scope, $ionicModal) {
-  })
 
   .controller('ShowmovieCtrl', function ($scope, $ionicModal, $state, $stateParams, $http) {
     $scope.seeText = "see more";
