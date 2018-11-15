@@ -26,4 +26,7 @@
 .fbold{
     font-weight: bold;
 }
-
+.img-result{
+    width:75%;
+    height: auto; 
+}

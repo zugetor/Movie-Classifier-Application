@@ -10,42 +10,47 @@
           <img ng-if="moviedetail.Poster == 'N/A'" class="image" src="img/no-image-icon-23500.jpg">
         </div>
         <div class="item">
-          <div class="row text-center">
-            <div class="col">
+          <div class="row">
+            <div class="col col-100 text-center">
               <h2 style="font-size: 25px; font-weight: bolder">{{moviedetail.Title}}</h2>
             </div>
+           
 
           </div>
+          
         </div>
         <div class="item">
           <div class="row">
             <div class="col col-33 text-center">
-              <h2 style="font-weight: bold">Production : </h2><h2>{{moviedetail.Production}}</h2>
+              <h2 style="font-weight: bold">Production</h2><h2>{{moviedetail.Production}}</h2>
             </div>
             <div class="col col-33 text-center">
-                <h2 style="font-weight: bold">Director : </h2><h2>{{moviedetail.Director}}</h2>
+                <h2 style="font-weight: bold">Director</h2><h2>{{moviedetail.Director}}</h2>
             </div>
             <div class="col col-33 text-center">
-                <h2 style="font-weight: bold">Rating : </h2><h2>{{moviedetail.imdbRating}}/10 <i class="icon ion-star"></i></h2>
+                <h2 style="font-weight: bold">Rating</h2><h2>{{moviedetail.imdbRating}}/10 <i class="icon ion-star"></i></h2>
             </div>
           </div>
         </div>
         <div class="item">
             <div class="row">
               <div class="col col-25 text-center">
-                <h2 style="font-weight: bold">Genre : </h2><h2>{{moviedetail.Genre}}</h2>
+                <h2 style="font-weight: bold">Genre </h2><h2>{{moviedetail.Genre}}</h2>
               </div>
               <div class="col col-25 text-center">
-                  <h2 style="font-weight: bold">Rated : </h2><h2>{{moviedetail.Rated}}</h2>
+                  <h2 style="font-weight: bold">Rated</h2><h2>{{moviedetail.Rated}}</h2>
               </div>
               <div class="col col-25 text-center">
-                  <h2 style="font-weight: bold">Year : </h2><h2>{{moviedetail.Year}}</h2>
+                  <h2 style="font-weight: bold">Year</h2><h2>{{moviedetail.Year}}</h2>
               </div>
               <div class="col col-25 text-center">
-                  <h2 style="font-weight: bold">Country : </h2><h2>{{moviedetail.Country}}</h2>
+                  <h2 style="font-weight: bold">Country</h2><h2>{{moviedetail.Country}}</h2>
               </div>
             </div>
           </div>
+          <div class="item text-center">
+          <button class="button button-balanced"><i class="icon ion-heart"></i> Add to Favorite</button>
+        </div>
         <h2>Plot</h2>
         <p>
           {{minplot}}
@@ -62,10 +67,3 @@
     </div>
   </ion-content>
 </ion-view>
-
-
-
-<h2>Year : {{moviedetail.Year}}</h2>
-              <h2>Country : {{moviedetail.Country}}</h2>
-              <h2>Rated : {{moviedetail.Rated}}</h2>
-              <h2>Rated : {{moviedetail.Rated}}</h2>
