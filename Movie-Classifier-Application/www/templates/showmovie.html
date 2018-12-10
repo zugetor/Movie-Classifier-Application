@@ -1,67 +1,81 @@
-<ion-view view-title="ViewMovie">
-    <ion-nav-buttons side="left">
-        <a class="button button-icon ion-arrow-left-c" href="#/app/home"></a>
-      </ion-nav-buttons>
+<ion-view>
+  <ion-nav-bar class="bar bar-header bar-stable">
+    <ion-nav-title>ViewMovie</ion-nav-title>
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
   <ion-content>
     <div class="list card">
       <div class="item item-body">
         <div class="text-center">
-          <img ng-if="moviedetail.Poster != 'N/A'" class="image" src="{{moviedetail.Poster}}">
-          <img ng-if="moviedetail.Poster == 'N/A'" class="image" src="img/no-image-icon-23500.jpg">
+          <img
+            ng-if="moviedetail.Poster != 'N/A'"
+            class="image"
+            src="{{moviedetail.Poster}}"
+          />
+          <img
+            ng-if="moviedetail.Poster == 'N/A'"
+            class="image"
+            src="img/no-image-icon-23500.jpg"
+          />
         </div>
         <div class="item">
           <div class="row">
             <div class="col col-100 text-center">
-              <h2 style="font-size: 25px; font-weight: bolder">{{moviedetail.Title}}</h2>
-            </div>           
-
+              <h2 style="font-size: 25px; font-weight: bolder">
+                {{ moviedetail.Title }}
+              </h2>
+            </div>
           </div>
-          
         </div>
         <div class="item">
           <div class="row">
             <div class="col col-33 text-center">
-              <h2 style="font-weight: bold">Production</h2><h2>{{moviedetail.Production}}</h2>
+              <h2 style="font-weight: bold">Production</h2>
+              <h2>{{ moviedetail.Production }}</h2>
             </div>
             <div class="col col-33 text-center">
-                <h2 style="font-weight: bold">Director</h2><h2>{{moviedetail.Director}}</h2>
+              <h2 style="font-weight: bold">Director</h2>
+              <h2>{{ moviedetail.Director }}</h2>
             </div>
             <div class="col col-33 text-center">
-                <h2 style="font-weight: bold">Rating</h2><h2>{{moviedetail.imdbRating}}/10 <i class="icon ion-star"></i></h2>
+              <h2 style="font-weight: bold">Rating</h2>
+              <h2>
+                {{ moviedetail.imdbRating }}/10 <i class="icon ion-star"></i>
+              </h2>
             </div>
           </div>
         </div>
         <div class="item">
-            <div class="row">
-              <div class="col col-25 text-center">
-                <h2 style="font-weight: bold">Genre </h2><h2>{{moviedetail.Genre}}</h2>
-              </div>
-              <div class="col col-25 text-center">
-                  <h2 style="font-weight: bold">Rated</h2><h2>{{moviedetail.Rated}}</h2>
-              </div>
-              <div class="col col-25 text-center">
-                  <h2 style="font-weight: bold">Year</h2><h2>{{moviedetail.Year}}</h2>
-              </div>
-              <div class="col col-25 text-center">
-                  <h2 style="font-weight: bold">Country</h2><h2>{{moviedetail.Country}}</h2>
-              </div>
+          <div class="row">
+            <div class="col col-25 text-center">
+              <h2 style="font-weight: bold">Genre</h2>
+              <h2>{{ moviedetail.Genre }}</h2>
+            </div>
+            <div class="col col-25 text-center">
+              <h2 style="font-weight: bold">Rated</h2>
+              <h2>{{ moviedetail.Rated }}</h2>
+            </div>
+            <div class="col col-25 text-center">
+              <h2 style="font-weight: bold">Year</h2>
+              <h2>{{ moviedetail.Year }}</h2>
+            </div>
+            <div class="col col-25 text-center">
+              <h2 style="font-weight: bold">Country</h2>
+              <h2>{{ moviedetail.Country }}</h2>
             </div>
           </div>
-          <div class="item text-center">
-          <button class="button button-balanced"><i class="icon ion-heart"></i> Add to Favorite</button>
+        </div>
+        <div class="item text-center">
+          <button class="button button-balanced">
+            <i class="icon ion-heart"></i> Add to Favorite
+          </button>
         </div>
         <h2>Plot</h2>
-        <p>
-          {{minplot}}
-        </p>
-        <a ng-click="seemore()">{{seeText}}</a>
-        <p>
-
-        </p>
+        <p>{{ minplot }}</p>
+        <a ng-click="seemore()">{{ seeText }}</a>
+        <p></p>
       </div>
-      <div class="item item-body">
-
-      </div>
+      <div class="item item-body"></div>
     </div>
   </ion-content>
 </ion-view>
