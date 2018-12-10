@@ -1,49 +1,27 @@
 <ion-view view-title="Box Office">
   <ion-content>
-
     <ion-list>
 
       <ion-item class="item item-button-right">
         <h2>Daily Chart</h2>
         <button class="button button-clear button-dark" ng-click="DD()">
-          <h2>{{Day}}</h2>
+          <h2>{{ Day }}</h2>
         </button>
       </ion-item>
+
       <div class="{{hideD}}">
         <ion-scroll direction="x" class="wide-as-needed">
 
           <div class="row">
-
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
+            <div class="col col-33" ng-repeat="b in boxday">
+                <a class="item item-thumbnail-top test-center" href="#/app/showmovie/{{b.imdbID}}">
+                  <img src="{{b.Poster}}" height="100%" width="100%"/>
+                  <h2>{{b.Title}}</h2>
+                  <h4>{{b.Gross}}</h4>
+                </a>
+              </div>
             </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-
-          </div>
+        </div>
 
         </ion-scroll>
       </div>
@@ -51,42 +29,14 @@
       <div class="{{showD}}">
         <ion-scroll direction="y" class="wide-as-needed">
 
-          <div class="row">
-
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
+          <div class="row" ng-repeat="b in boxday" ng-if="$index % 2 == 0">
+            <div class="col col-50" ng-repeat="i in [$index, $index + 1, $index + 2]" ng-init="item = boxday[i]">
+              <a class="item item-thumbnail-top test-center" href="#/app/showmovie/{{item.imdbID}}">
+                <img src="{{item.Poster}}" height="100%" width="100%"/>
+                  <h2>{{item.Title}}</h2>
+                  <h4>{{item.Gross}}</h4>
               </a>
             </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-
           </div>
 
         </ion-scroll>
@@ -95,43 +45,21 @@
       <ion-item class="item item-button-right">
         <h2>Weekly Chart</h2>
         <button class="button button-clear button-dark" ng-click="WW()">
-          <h2>{{Week}}</h2>
+          <h2>{{ Week }}</h2>
         </button>
       </ion-item>
       <div class="{{hideW}}">
         <ion-scroll direction="x" class="wide-as-needed">
 
           <div class="row">
-
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-
+              <div class="col col-33" ng-repeat="b in boxweek">
+                  <a class="item item-thumbnail-top test-center" href="#/app/showmovie/{{b.imdbID}}">
+                    <img src="{{b.Poster}}" height="100%" width="100%"/>
+                    <h2>{{b.Title}}</h2>
+                    <h4>{{b.Gross}}</h4>
+                  </a>
+                </div>
+              </div>
           </div>
 
         </ion-scroll>
@@ -140,43 +68,15 @@
       <div class="{{showW}}">
         <ion-scroll direction="y" class="wide-as-needed">
 
-          <div class="row">
-
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-
-          </div>
+            <div class="row" ng-repeat="b in boxweek" ng-if="$index % 2 == 0">
+                <div class="col col-50" ng-repeat="i in [$index, $index + 1, $index + 2]" ng-init="item = boxweek[i]">
+                  <a class="item item-thumbnail-top test-center" href="#/app/showmovie/{{item.imdbID}}">
+                    <img src="{{item.Poster}}" height="100%" width="100%"/>
+                      <h2>{{item.Title}}</h2>
+                      <h4>{{item.Gross}}</h4>
+                  </a>
+                </div>
+              </div>
 
         </ion-scroll>
       </div>
@@ -184,43 +84,22 @@
       <ion-item class="item item-button-right">
         <h2>Monthly Chart</h2>
         <button class="button button-clear button-dark" ng-click="MM()">
-          <h2>{{Month}}</h2>
+          <h2>{{ Month }}</h2>
         </button>
       </ion-item>
+
       <div class="{{hideM}}">
         <ion-scroll direction="x" class="wide-as-needed">
 
           <div class="row">
-
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-
+              <div class="col col-33" ng-repeat="b in boxmonth">
+                  <a class="item item-thumbnail-top test-center" href="#/app/showmovie/{{b.imdbID}}">
+                    <img src="{{b.Poster}}" height="100%" width="100%"/>
+                    <h2>{{b.Title}}</h2>
+                    <h4>{{b.Gross}}</h4>
+                  </a>
+                </div>
+              </div>
           </div>
 
         </ion-scroll>
@@ -229,64 +108,33 @@
       <div class="{{showM}}">
         <ion-scroll direction="y" class="wide-as-needed">
 
-          <div class="row">
-
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-
-          </div>
-
-          <div class="row">
-
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-            <div class="col">
-              <a class="item item-thumbnail-top test-center" href="#">
-                <img src="img/cover.jpg" height=100% width=100%>
-                <h2>Pretty Hate Machine</h2>
-                <h4>Nine Inch Nails</h4>
-              </a>
-            </div>
-
-          </div>
+            <div class="row" ng-repeat="b in boxmonth" ng-if="$index % 2 == 0">
+                <div class="col col-50" ng-repeat="i in [$index, $index + 1, $index + 2]" ng-init="item = boxmonth[i]">
+                  <a class="item item-thumbnail-top test-center" href="#/app/showmovie/{{item.imdbID}}">
+                    <img src="{{item.Poster}}" height="100%" width="100%"/>
+                      <h2>{{item.Title}}</h2>
+                      <h4>{{item.Gross}}</h4>
+                  </a>
+                </div>
+              </div>
 
         </ion-scroll>
       </div>
-
     </ion-list>
-
   </ion-content>
 
-  <ion-footer-bar class="tabs-striped tabs-color-light tabs-background-royal tabs-icon-top">
+  <ion-footer-bar
+    class="tabs-striped tabs-color-light tabs-background-royal tabs-icon-top"
+  >
     <div class="tabs">
       <a class="tab-item" href="#" nav-transition="none">
-        <i class="icon ion-home"></i>
-        HOME
+        <i class="icon ion-home"></i> HOME
       </a>
       <a class="tab-item" href="#/app/favorite" nav-transition="none">
-        <i class="icon ion-star"></i>
-        Favorite
+        <i class="icon ion-star"></i> Favorite
       </a>
       <a class="tab-item active" href="#/app/boxoffice" nav-transition="none">
-        <i class="icon ion-arrow-graph-up-right"></i>
-        Box Office
+        <i class="icon ion-arrow-graph-up-right"></i> Box Office
       </a>
     </div>
   </ion-footer-bar>
