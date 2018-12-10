@@ -1,44 +1,39 @@
 <ion-view view-title="Favorite">
-    <ion-content>
-		
-		<div class="item" ng-repeat="r in favlist" href="#/app/showmovie/{{r.imdbID}}">
-      
-      <div class="row">
-          
-      <div class="col col-33">
-      <a href="#/app/showmovie/{{r.imdbID}}"><img ng-if="r.Poster != 'N/A' " src="{{r.Poster}}" class="poster-search" ></a>
-      <a href="#/app/showmovie/{{r.imdbID}}"></a><img ng-if="r.Poster == 'N/A' " src="img/no-image-icon-23500.jpg" class="poster-search"></a>
-      </div>
-    
-      <div class="col col-50">
-          <a href="#/app/showmovie/{{r.imdbID}}"><h2>{{r.Title}}</h2>
-      <p>({{r.Year}})</p></a>
-      </div>
-    
-      <div class="col col-10 text-right">
-          <button ng-click="delfav($index)"><h1><i class="icon ion-trash-a"></i></h1></button>
-          </div>
-    </div>
-    
-  </div>
+  <ion-content>
+    <ion-list can-swipe="true">
+      <ion-item
+        item-width="'100%"
+        item-height="100%"
+        ng-repeat="r in favlist"
+        href="#/app/showmovie/{{r.imdbID}}"
+        class="item-thumbnail-left"
+        hold-list
+      >
+        <img src="{{r.Poster}}" height="100%" width="100%" />
+        <h2>{{ r.Title }}</h2>
+        <p>({{ r.Year }})</p>
+        <ion-option-button
+          class="button-assertive icon ion-trash-a"
+          ng-click="delfav($index)"
+          >Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <div
+    class="tabs-striped tabs-color-light tabs-background-royal tabs-icon-top"
+  >
+    <div class="tabs">
+      <a class="tab-item" href="#" nav-transition="none">
+        <i class="icon ion-home"></i> HOME
+      </a>
 
-		
-    </ion-content>
-    <div class="tabs-striped tabs-color-light tabs-background-royal tabs-icon-top" >
-            <div class="tabs">
-              <a class="tab-item" href="#" nav-transition="none">
-                <i class="icon ion-home"></i>
-                HOME
-              </a>
-             
-              <a class="tab-item active" href="#/app/favorite" nav-transition="none">
-                <i class="icon ion-star"></i>
-                Favorite
-              </a>
-              <a class="tab-item" href="#/app/boxoffice" nav-transition="none">
-                <i class="icon ion-arrow-graph-up-right"></i>
-                Box Office
-              </a>
-            </div>
-          </div>
-  </ion-view>
+      <a class="tab-item active" href="#/app/favorite" nav-transition="none">
+        <i class="icon ion-star"></i> Favorite
+      </a>
+      <a class="tab-item" href="#/app/boxoffice" nav-transition="none">
+        <i class="icon ion-arrow-graph-up-right"></i> Box Office
+      </a>
+    </div>
+  </div>
+</ion-view>
