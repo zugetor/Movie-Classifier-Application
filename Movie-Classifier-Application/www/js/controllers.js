@@ -147,6 +147,7 @@ angular.module("starter.controllers", [])
 		$rootScope.$on('add', function() {
 			var data = FavAdd.get();
 			$scope.favlist.push(data);
+			console.log($scope.favlist);
 		});
 	})
 	
@@ -198,6 +199,7 @@ angular.module("starter.controllers", [])
 			update: function(id,title,poster,yr) {
 				data = {Poster: poster,Title: title,Type: "movie",Year: yr,imdbID: id};
 				$rootScope.$broadcast('add');
+				console.log(data);
 			}
 		}
 	})
