@@ -187,7 +187,7 @@ angular.module("starter.controllers", [])
 		};
 	})
 
-	.factory('FavAdd', function($rootScope, $http) {
+	.factory('FavAdd', function($rootScope) {
 
 		var data = {Poster: "",Title: "",Type: "movie",Year: "",imdbID: ""};
 
