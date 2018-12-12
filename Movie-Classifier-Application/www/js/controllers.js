@@ -3,7 +3,7 @@ angular
 
   .controller("AppCtrl", function($scope, $ionicModal) {})
 
-  .controller("HomeCtrl", function($scope, $http) {
+  .controller("HomeCtrl", function($scope, $state, $http) {
     $scope.errorResult = "";
     $scope.hideorshow2 = "ng-hide";
     $scope.searchtext = "";
@@ -59,20 +59,30 @@ angular
 
       $http
         .post(
-          "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/9adc16ef-c1ed-4f38-b9ff-0eb8ca20649d/image",
+          "https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/679fb075-7a66-41d7-9507-3f08ae6b47a2/image",
           data,
           config
         )
         .success(function(data, status, headers, config) {
-          $scope.hideorshow = "ng-hide";
-          $scope.hideorshow2 = "ng-show";
           $scope.picresult = data["predictions"][0]["tagName"];
-          if ($scope.picresult == "Terminator") {
-            $scope.resultMovie = "img/termi.jpg";
-          } else if ($scope.picresult == "Back2TheFuture") {
-            $scope.resultMovie = "img/back2.jpg";
-          } else if ($scope.picresult == "JurassicPark") {
-            $scope.resultMovie = "img/juras.jpg";
+          if ($scope.picresult == "Holy Fucking Shit Its a Dinosaur") {
+				$state.go('app.showmovie', {Id: "tt0107290"});
+          } else if ($scope.picresult == "Stand by Me Doraemon") {
+				$state.go('app.showmovie', {Id: "tt3331846"});
+          } else if ($scope.picresult == "Doraemon Nobita no Takarajima") {
+				$state.go('app.showmovie', {Id: "tt8098546"});
+          } else if ($scope.picresult == "Ralph Breaks the Internet") {
+				$state.go('app.showmovie', {Id: "tt5848272"});
+          } else if ($scope.picresult == "Back To The Future") {
+				$state.go('app.showmovie', {Id: "tt0088763"});
+          } else if ($scope.picresult == "The Terminator") {
+				$state.go('app.showmovie', {Id: "tt0088247"});
+          } else if ($scope.picresult == "Fantastic Beasts The Crimes of Grindelwald") {
+				$state.go('app.showmovie', {Id: "tt4123430"});
+          } else if ($scope.picresult == "Purple Sweet Potato") {
+				$state.go('app.showmovie', {Id: "tt4154756"});
+          } else if ($scope.picresult == "Ready Player One") {
+				$state.go('app.showmovie', {Id: "tt1677720"});
           }
         });
     };
