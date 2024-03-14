@@ -1,6 +1,6 @@
 # Movie-Classifier-Application
 
-  * [DEMO](https://sunsunza2009.github.io/Movie-Classifier-Application/)
+  * [DEMO](https://zugetor.github.io/Movie-Classifier-Application/)
 
 ### คุณสมบัติ
 
